@@ -8,6 +8,8 @@ const store = useCounterStore();
 
 const { data, pending, error } = await useFetch('/api/hello')
 
+const { data: products } = await useFetch('/api/products')
+
 import { useMouse } from '@vueuse/core'
 
 const { sayHello, capitalize } = useUtils();
@@ -35,5 +37,12 @@ const nuxtApp = useNuxtApp();
     <p v-else>Server API Response: {{ data }}</p>
   </div>
     </h1>
+  </div>
+  <div>
+    <h1 class="text-xl">Fetch Data:</h1>
+    <div>{{ products }}</div>
+    <ul>
+      <li v-for="(item, index) in products" :key="index">{{ item.name }}</li>
+    </ul>
   </div>
 </template>
