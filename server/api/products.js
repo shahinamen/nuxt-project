@@ -9,3 +9,11 @@ export default defineEventHandler(() => {
   const products = JSON.parse(fileContent)
   return products
 })
+
+/*const data = "server/api/data/products.json";
+
+export default defineEventHandler(()=> {
+    return {
+        data,
+    }
+});*/

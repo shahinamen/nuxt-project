@@ -6,24 +6,33 @@ definePageMeta({
 import { useCounterStore } from '~/stores/myStore';
 const store = useCounterStore();
 
-const { data, pending, error } = await useFetch('/api/hello')
+const { data, error } = await useLazyFetch('/api/hello')
 
 const { data: products } = await useFetch('/api/products')
+
+const {data: productCount, pending} = await useAsyncData("products", ()=>{
+  $fetch('/api/counter')
+});
+const refresh = () => refreshNuxtData("products");
+
 
 import { useMouse } from '@vueuse/core'
 
 const { sayHello, capitalize } = useUtils();
 const { x, y } = useMouse();
 const nuxtApp = useNuxtApp();
+
 </script>
 <template>
+  <h1>Counter</h1>
+    <div>{{ pending ? "Loading" : productCount }}</div>
+    <button @click="refresh" class="cursor-pointer border-1 border-red-600">Refresh</button>
   <p>This is Page for Custom Layout</p>
   <h1 class="text-8xl">{{ sayHello() }}</h1>
   <h1 class="text-8xl">{{ capitalize('this is nuxt js') }}</h1>
   <h1 class="text-4xl">X: {{ x }} - Y: {{ y }}</h1>
   <h1>hello {{ nuxtApp.$hello }}</h1>
-  <div>
-    <h1>Counter</h1>
+  <div>    
     <h2 class="text-2xl">{{ store.count }}</h2>
     <button class="cursor-pointer m-2 border-1 border-green-500" @click="store.increment">Increment</button>
     <button class="cursor-pointer m-2 border-1 border-green-500" @click="store.decrement">Decrement</button>
