@@ -32,7 +32,8 @@ export default defineNuxtConfig({
 
   modules: [
     "@pinia/nuxt",
-    "@nuxtjs/google-fonts" // ✅ Required to use googleFonts option
+    "@nuxtjs/google-fonts",
+    "@nuxtjs/tailwindcss"
   ],
 
   googleFonts: {
@@ -41,7 +42,4 @@ export default defineNuxtConfig({
     },
     display: 'swap',
   },
-
-  // ❌ No need to manually add tailwindcss here
-  // ✅ Use @nuxtjs/tailwindcss module instead (much easier)
 })
