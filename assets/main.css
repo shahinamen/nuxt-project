@@ -1,1 +1,5 @@
-@import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+body {
+    font-family: "Figtree", sans-serif;
+}
