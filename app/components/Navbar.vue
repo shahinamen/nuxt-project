@@ -30,8 +30,19 @@ const isOpen = ref(false)
 
       <!-- Desktop Buttons -->
       <div class="hidden md:flex space-x-2">
-        <button class="bg-white border border-indigo-700 text-indigo-700 px-4 py-1 rounded-full hover:bg-indigo-50">Login</button>
-        <button class="bg-indigo-700 text-white px-4 py-1 rounded-full hover:bg-indigo-800">Register</button>
+        <NuxtLink
+          to="/login"
+          class="bg-white border border-indigo-700 text-indigo-700 px-4 py-1 rounded-full hover:bg-indigo-50 transition-colors duration-200"
+        >
+          Login
+        </NuxtLink>
+
+        <NuxtLink
+          to="/register"
+          class="bg-indigo-700 text-white px-4 py-1 rounded-full hover:bg-indigo-800 transition-colors duration-200"
+        >
+          Register
+        </NuxtLink>
       </div>
     </div>
 
@@ -44,8 +55,19 @@ const isOpen = ref(false)
             <li><NuxtLink to="/contact" @click="isOpen = false" class="block hover:text-indigo-600" exact-active-class="nuxt-link-active">Contact</NuxtLink></li>
         </ul>
         <div class="mt-3 flex space-x-2">
-            <button class="w-full bg-white border border-indigo-700 text-indigo-700 px-4 py-1 rounded-full hover:bg-indigo-50">Login</button>
-            <button class="w-full bg-indigo-700 text-white px-4 py-1 rounded-full hover:bg-indigo-800">Register</button>
+            <NuxtLink
+              to="/login"
+              class="w-full text-center bg-white border border-indigo-700 text-indigo-700 px-4 py-1 rounded-full hover:bg-indigo-50 transition-colors duration-200"
+            >
+              Login
+            </NuxtLink>
+
+            <NuxtLink
+              to="/register"
+              class="w-full text-center bg-indigo-700 text-white px-4 py-1 rounded-full hover:bg-indigo-800 transition-colors duration-200"
+            >
+              Register
+            </NuxtLink>
         </div>
     </div>
   </nav>

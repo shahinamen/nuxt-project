@@ -1,12 +1,12 @@
 <template>
   <div class="min-h-96 flex flex-col justify-center items-center">
-    <h1 class="text-3xl md:text-5xl font-bold text-center text-indigo-700">Get in Touch with Us</h1>
+    <h1 class="text-3xl md:text-5xl font-bold text-center text-indigo-700">Register your Credentials</h1>
     <p class="px-2 mt-2 md:max-w-2xl text-sm md:text-lg text-center text-indigo-950">
         We’re here to assist you with any questions or concerns—reach out to our dedicated support team anytime.
     </p>
   </div>
   <div class="flex flex-col justify-center items-center px-4 py-12 bg-gray-50 min-h-screen">
-  <h1 class="text-2xl md:text-4xl font-bold text-center text-indigo-700 mb-8">Send a Message</h1>
+  <h1 class="text-2xl md:text-4xl font-bold text-center text-indigo-700 mb-8">Register</h1>
 
   <form class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl bg-white p-8 rounded-lg shadow-md">
     <div class="flex flex-col">
