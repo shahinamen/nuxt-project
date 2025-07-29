@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-96 flex flex-col justify-center items-center">
-    <h1 class="text-2xl md:text-5xl font-bold text-center">
+    <h1 class="text-2xl md:text-5xl font-bold text-center text-indigo-700">
       <div>Discover the Power of</div>
       <div>Marketing Opportunities Await</div>
     </h1>
