@@ -9,7 +9,7 @@ const isOpen = ref(false)
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
       <div class="flex items-center text-indigo-700 font-bold text-lg">
-        <i class="pi pi-sparkles pr-2"></i> SPARKLES
+        <NuxtLink to="/" class="cursor-pointer" exact-active-class="nuxt-link-active"><i class="pi pi-sparkles pr-2"></i> SPARKLES</NuxtLink>
       </div>
 
       <!-- Hamburger Icon -->
