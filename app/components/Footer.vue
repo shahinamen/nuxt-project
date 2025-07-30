@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <nav class="bg-indigo-950 shadow-md fixed bottom-0 left-0 w-full z-50 mt-8">
+  <nav class="bg-slate-950 shadow-md fixed bottom-0 left-0 w-full z-50 mt-8">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
       <div class="flex items-center text-white font-bold text-md">
