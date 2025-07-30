@@ -32,7 +32,7 @@ const { isLoading } = useImage({ src: avatarUrl })
           <p class="text-justify">The experience and insights we gained while building tailored solutions for our clients became the foundation for <span class="text-indigo-700 font-bold">SPARKLES'</span> own product journey. What began as internal tools to support our workflow has evolved into a suite of promising products poised for long-term success.</p>
           <p class="text-justify mt-2">Our next bold ambition is to grow <span class="text-indigo-700 font-bold">SPARKLES</span> into a billion-dollar product studio—by staying true to what we do best: crafting purposeful, impactful digital experiences that make a difference.</p>
           <div class="mt-12 flex items-center">
-            <div>
+            <div class="pr-3">
               <span v-if="isLoading">Loading</span>
               <img v-else :src="avatarUrl" class="rounded-full max-w-[170px]">
             </div>
