@@ -5,7 +5,7 @@
         We’re here to assist you with any questions or concerns—reach out to our dedicated support team anytime.
     </p>
   </div>
-  <div class="flex flex-col justify-center items-center px-4 py-12 bg-gray-50 min-h-screen">
+  <div class="flex flex-col justify-center items-center px-4 py-12 bg-gray-50 min-h-screen mb-32">
   <h1 class="text-2xl md:text-4xl font-bold text-center text-indigo-700 mb-8">Send a Message</h1>
 
   <form class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl bg-white p-8 rounded-lg shadow-md">

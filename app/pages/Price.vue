@@ -73,20 +73,20 @@ const card = [
 ]
 </script>
 <template>
-  <div class="min-h-96 flex flex-col justify-center items-center">
+    <div class="min-h-96 flex flex-col justify-center items-center">
     <h1 class="text-3xl md:text-5xl font-bold text-center text-indigo-700">
-      <div>Choose the Right</div>
-      <div>Plan for Your Financial Needs</div>
+        <div>Choose the Right</div>
+        <div>Plan for Your Financial Needs</div>
     </h1>
     <p class="px-2 mt-2 md:max-w-2xl text-sm md:text-lg text-center text-indigo-950">Explore our range of tailored banking packages designed to provide secure, efficient, and comprehensive financial services for individuals and teams.</p>
     <div class="flex space-x-2 mt-6">
         <button class="bg-white border border-indigo-700 text-indigo-700 px-4 py-1 rounded-full hover:bg-indigo-50">Getting Started</button>
         <button class="bg-indigo-700 text-white px-4 py-1 rounded-full hover:bg-indigo-800">Explore Marketing</button>
-      </div>
-  </div>
-  <div class="mt-8 mb-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 px-4">
-            <div v-for="item in card" :key="item.title" class="bg-white p-6 rounded-lg shadow-lg border-indigo-600 border-1 cursor-pointer">
+        </div>
+    </div>
+    <div class="mt-8 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 mb-40">
+            <div v-for="item in card" :key="item.title" class="bg-white p-6 rounded-lg shadow-lg border border-black/10 hover:border-indigo-600 transition-all duration-300 cursor-pointer">
                 <h3 class="text-xl font-semibold mb-4">{{ item.title }}</h3>
                 <p class="text-gray-700 mb-4">{{ item.description }}</p>
                 <p class="mb-4">
@@ -101,7 +101,7 @@ const card = [
                     </ul>
                 </p>
                 <p class="text-2xl font-bold mb-4">{{ item.price }}</p>
-                <button class="bg-[#8C30F5] hover:bg-[#6c1dcc] text-white px-4 py-2 rounded-full right-0 cursor-pointer">{{ item.buttonText }}</button>
+                <button class="bg-indigo-700 hover:bg-indigo-800 text-white px-4 py-1 rounded-full right-0 cursor-pointer">{{ item.buttonText }}</button>
             </div>
         </div>
     </div>
