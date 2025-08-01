@@ -21,7 +21,9 @@ import { useMouse } from '@vueuse/core'
 const { sayHello, capitalize } = useUtils();
 const { x, y } = useMouse();
 const nuxtApp = useNuxtApp();
-const { data: sessions } = await useFetch('/api/sessions')
+const { data: sessions } = await useFetch('/api/sessions', {
+  server: true,
+})
 </script>
 <template>
   <h1>Counter</h1>
