@@ -21,7 +21,7 @@ import { useMouse } from '@vueuse/core'
 const { sayHello, capitalize } = useUtils();
 const { x, y } = useMouse();
 const nuxtApp = useNuxtApp();
-
+const { data: sessions } = await useFetch('/api/sessions')
 </script>
 <template>
   <h1>Counter</h1>
@@ -30,6 +30,19 @@ const nuxtApp = useNuxtApp();
   <p>This is Page for Custom Layout</p>
   <h1 class="text-8xl">{{ sayHello() }}</h1>
   <h1 class="text-8xl">{{ capitalize('this is nuxt js') }}</h1>
+  <div>
+    <h1 class="text-2xl font-bold mb-4">Active Sessions</h1>
+    <ul class="space-y-2">
+      <li
+        v-for="session in sessions"
+        :key="session.id"
+        class="p-4 bg-gray-100 rounded shadow"
+      >
+        <p><strong>User:</strong> {{ session.user_agent }}</p>
+        <p><strong>Login Time:</strong> {{ session.id }}</p>
+      </li>
+    </ul>
+  </div>
   <h1 class="text-4xl">X: {{ x }} - Y: {{ y }}</h1>
   <h1>hello {{ nuxtApp.$hello }}</h1>
   <div>    
@@ -52,6 +65,19 @@ const nuxtApp = useNuxtApp();
     <div>{{ products }}</div>
     <ul>
       <li v-for="(item, index) in products" :key="index">{{ item.name }}</li>
+    </ul>
+  </div>
+  <div>
+    <h1 class="text-2xl font-bold mb-4">Active Sessions</h1>
+    <ul class="space-y-2">
+      <li
+        v-for="session in sessions"
+        :key="session.id"
+        class="p-4 bg-gray-100 rounded shadow"
+      >
+        <p><strong>User:</strong> {{ session.user_name }}</p>
+        <p><strong>Login Time:</strong> {{ session.login_time }}</p>
+      </li>
     </ul>
   </div>
 </template>
